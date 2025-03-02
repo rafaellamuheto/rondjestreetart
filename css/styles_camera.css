@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Montseratt';
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Montseratt-Regular';
+    src: url(../fonts/Montserrat-Regular.ttf);
+  }
+  
+
+/* Dit is de opmaak voor de layout van de pagina*/
+
+body {
+    min-height: 100vh;
+    font-family: Montseratt-Bold;
+    display: grid;
+    justify-content: center;
+    margin: 0%;
+
+}
+
+.container_main {
+    width: 45vh;
+    height: 100vh;
+    background-color: #fc0000;
+    display: grid;
+    font-family: Montseratt-Regular;
+}
+
+
+
+

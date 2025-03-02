@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'Montseratt';
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Montseratt-Regular';
+    src: url(../fonts/Montserrat-Regular.ttf);
+  }
+  
+
+/* Dit is de opmaak voor de layout van de pagina*/
+
+body {
+    min-height: 100vh;
+    font-family: Montseratt-Bold;
+    display: grid;
+    justify-content: center;
+    margin: 0%;
+
+}
+
+.container_main {
+    width: 45vh;
+    height: 100vh;
+    background-color: #F2F2F2;
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr 0.15fr;
+    grid-template-areas: 
+        "content"
+        "navbar";
+    font-family: Montseratt-Regular;
+}
+
+.container_content {
+    grid-area: content;
+    display: flex;
+    height:100%;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+    background-color: #F2F2F2;
+}
+
+.container_nav {
+    grid-area: navbar;
+    display: grid;
+    justify-content: center;
+    height:70%;
+    order: 2;
+    background-color: #F2F2F2;
+}
+
+/* Dit is de opmaak voor de navigatie balk*/
+
+.navigatie_balk {
+    position: relative;
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+    .navigatie_balk ul {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+        .navigatie_balk ul li{
+            position: relative;
+            left: -12px;
+            list-style: none;
+            width: 70px;
+            height: 70px;
+            z-index: 1;
+        }
+
+            .navigatie_balk ul li a{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                font-weight: 500;
+            }
+
+                .navigatie_balk ul li a .icon {
+                    position: relative;
+                    display: block;
+                    line-height: 75px;
+                    font-size: 1.5em;
+                    text-align: center;
+                    transition: 0.5s;
+                    color: #ABABAB;
+                }
+
+                .navigatie_balk ul li.active a .icon {
+                    transform: translateY(-35px);
+                    color:#fff;;
+                }
+
+                .navigatie_balk ul li .text {
+                    position: absolute;
+                    color:#ABABAB;
+                    font-weight: 400;
+                    font-size: 0.75em;
+                    letter-spacing: 0.05em;
+                    transition: 0.5s;
+                    opacity: 0;
+                    top: 35px;
+                    transform: translateY(20px);
+                }
+
+                .navigatie_balk ul li.active a .text {
+                    opacity: 1;
+                    transform: translateY(10px);
+                    color:#ABABAB;
+                }
+
+
+/* Dit is de opmaak voor de zwarte knop die meebeweegt*/
+.indicator {
+    position: absolute;
+    top: -60%;
+    left: 22px;
+    width: 70px;
+    height: 70px;
+    background:#000000;
+    border-radius: 50%;
+    border: 6px solid #F2F2F2;
+    transition: 0.5s;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 42%;
+    left: -22.5px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -10px 0 0 #F2F2F2;
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 42%;
+    right: -22.5px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0px -10px 0 0 #F2F2F2;
+}
+
+.navigatie_balk ul li:nth-child(1).active ~ .indicator  {
+    transform: translateX(calc(70px * 0))
+}
+.navigatie_balk ul li:nth-child(2).active ~ .indicator  {
+    transform: translateX(calc(70px * 1))
+}
+.navigatie_balk ul li:nth-child(3).active ~ .indicator  {
+    transform: translateX(calc(70px * 2))
+}
+.navigatie_balk ul li:nth-child(4).active ~ .indicator  {
+    transform: translateX(calc(70px * 3))
+}
+.navigatie_balk ul li:nth-child(5).active ~ .indicator  {
+    transform: translateX(calc(70px * 4))
+}
+
+
+/* Dit is de opmaak voor de  */
+
+#page-title{
+    font-size: 20px;
+    color:#960000;
+    font-family: Montseratt;
+    text-align: center;
+  }
+
+p{  
+    border-radius: 30px;
+    margin-left: 30px;
+}
+
+/* Dit is de opmaak voor de button*/
+
+.knopje {
+    padding: 10px 60px;
+    background:#ffff;
+    border: 0rem;
+    outline: none;
+    cursor: pointer;
+    font-family: Montseratt;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #960000;
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+
+
+
+
+

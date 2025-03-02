@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rondjestreetart</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://kit.fontawesome.com/932d242fa0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container_main">
+        <div class="container_content">
+            <h2 id="page-title">RONDJE STREETART</h2>
+            <p>Wil je weten waar je naartoe moet? Bekijk dat via de route</p>
+
+            <img class="illustratie" src="../images/kaart.png">
+
+            <p>Hierboven is de route in Amsterdam te zien naar een van de locaties </p>
+
+            <button type="button" class="knopje" onclick="init()">Meer informatie over de streetart</button>
+        </div>
+    
+        <div class="container_nav">
+            <div class="navigatie_balk">    
+                <ul>
+                    <li class ="list active">
+                        <a href="../index.html">
+                            <span class="icon">
+                                <img class="illustratie" src="../images/huisje.png">   
+                            </span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li class ="list">
+                        <a href="../route.html">
+                            <span class="icon">
+                                <img class="illustratie" src="../images/pallet.png">
+                            </span>
+                            <span class="text">Streetart</span>
+                        </a>
+                    </li>
+                    <li class ="list">
+                        <a href="">
+                            <span class="icon">
+                                <img class="illustratie" src="../images/navigatie.png">
+                            </span>
+                            <span class="text">Route</span>
+                        </a>
+                        </a>
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink(){
+                list.forEach((item) => 
+                item.classList.remove('active'));
+                this.classList.add('active');
+                }
+            list.forEach((item)=>
+            item.addEventListener('mouseover', activeLink))
+        </script>
+</body>
+</html>  

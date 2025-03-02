@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rondjestreetart</title>
+
+    <link rel="stylesheet" href="css/styles_route.css">
+    <script src="https://kit.fontawesome.com/932d242fa0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div class="container_main">
+        <div class="container_content">
+
+            <h2 id="page-title">RONDJE STREETART</h2>
+
+         <button type="button" class="knopje" onclick="init()">Let me be myself</button>
+            <img class="annefrank" src="images/goeieannefrank.png" alt="schild">
+                <p>In Amsterdam-Noord maakte Eduardo Kobra een gigantisch kunstwerk van Anne Frank op een gebouw van drie verdiepingen met de tekst "Let me be myself". Dit stadsdeel is een paradijs voor street art liefhebbers waar je uren kunt rondlopen en genieten van de mooiste kunstwerken.</p>
+
+            <button type="button" class="knopje" onclick="init()">The Londen Police</button>
+             <img class="annefrank" src="images/london.png" alt="schild">
+              <p>Op de hoek van Prinsengracht 70 en de Tuinstraat prijkt een muurschildering van The London Police. Het kunstwerk combineert klassieke Nederlandse architectuur met urban art.</p>
+
+                 <button type="button" class="knopje" onclick="init()">Vrankrijk </button>
+                    <img class="annefrank" src="images/vrankrijk.png" alt="schild">
+                     <p>Vrankrijk, een voormalig kraakpand aan de Spuistraat 216 in Amsterdam, is nu een woon- en werkpand met een gesplitst woongedeelte en café. </p>
+           
+                          <button type="button" class="knopje" onclick="init()">Julieta XLF </button>
+                            <img class="annefrank" src="images/julia.png" alt="schild">
+                              <p>Julieta XLF maakte dit kunstwerk en zegt hierover: "Voor mij betekent Amsterdam for Everybody welkom. Het maakt niet uit waar je vandaan komt of wie je bent, er is altijd een plek voor je. Ik voelde me zelf ook erg welkom in Amsterdam."</p>
+
+                              <button type="button" class="knopje" onclick="init()">I feel so incomplete </button>
+                                <img class="annefrank" src="images/dface.png" alt="schild">
+                                    <p>D*Face, oftewel Dean Stockton, is een Britse street artist en grafisch ontwerper die wereldwijd bekendheid heeft gekregen met zijn gedurfde en prikkelende werk. Zijn kenmerkende stijl mixt street art, popart en grafisch design.
+                                        Wibautstraat 
+                                        </p>
+        </div>
+    
+
+        <div class="container_nav">
+            <div class="navigatie_balk">    
+                <ul>
+                    <li class ="list active">
+                        <a href="index.html">
+                            <span class="icon">
+                                 <img class="annefrank" src="images/huisje.png" alt="schild">
+
+                            </span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li class ="list">
+                        <a href="#">
+                            <span class="icon">
+                                <img class="annefrank" src="images/pallet.png" alt="schild">
+                            </span>
+                            <span class="text">Streetart</span>
+                        </a>
+                    </li>
+                    <li class ="list">
+                        <a href="html/camera.landing.html">
+                            <span class="icon">
+                                <img class="annefrank" src="images/navigatie.png" alt="schild">
+                            </span>
+                            <span class="text">Route</span>
+                        </a>
+                    
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            const list = document.querySelectorAll('.list');
+            function activeLink(){
+                list.forEach((item) => 
+                item.classList.remove('active'));
+                this.classList.add('active');
+                }
+            list.forEach((item)=>
+            item.addEventListener('mouseover', activeLink))
+        </script>
+
+    </script>
+</body>
+</html>
